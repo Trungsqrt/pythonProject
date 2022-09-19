@@ -12,6 +12,8 @@ pip i flask
 python-dotenv: load secret from env file
 pip i python-dotenv
 
+flash-login
+pip i flask-login
 
 
 ***********about project***********
