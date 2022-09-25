@@ -23,3 +23,7 @@ class User(db.Model, UserMixin):
    
    # 1 user has many Note
    notes = db.relationship("Note")
+   def __init__(self, email, password, user_name):
+      self.email = email
+      self.password = password
+      self.user_name = user_name
