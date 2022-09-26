@@ -1,4 +1,68 @@
-{% extends "base.html" %} {% block title %} HomePage {% endblock %} {% block
+{% extends "base.html" %} {% block title %} Home - Todolist App {% endblock %} {% block
 content %}
-<h1>This is homepage</h1>
+<div class="homepage-content">
+    <div class="homepage-content__heading">
+        </br>
+        <h3>Welcome to Todolist Application</h3>
+        </br>
+        <h3>Notes</h3>
+        </br>
+    </div>
+
+    <div>
+        <ul class="list-group list-group-flush" id="notes">
+            {% for note in user.notes%}
+            <div class="list-group-item-wrap">
+                <li class="list-group-item">{{note.data}}</li>
+                <button onclick="" class="edit-note-btn">Edit</button>
+                <button onclick="" class="delete-note-btn">Delete</button>
+            </div>
+            {% endfor %}
+        </ul>
+
+        </br>
+
+        <form method="POST">
+            <textarea name="note" id="note" class="form-control"></textarea>
+            </br>
+            <button type="submit" class="btn btn-primary">Add Note</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .homepage-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .homepage-content__heading {
+        text-align: center;
+    }
+
+    .list-group-item-wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    .edit-note-btn, .delete-note-btn {
+        display: inline-block;
+        width: 80px;
+        height: 30px;
+        border: 1px solid #000;
+        border-radius: 3px;
+    }
+
+    .edit-note-btn {
+        margin-left: 10px;
+        background-color: rgb(195, 222, 42);
+    }
+
+    .delete-note-btn {
+        margin-left: 10px;
+        background-color: rgb(255, 41, 41);
+    }
+</style>
 {% endblock %}

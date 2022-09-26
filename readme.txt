@@ -16,6 +16,10 @@ flash-login
 pip i flask-login
 
 
+*********** Install all the required packages ***********
+pip install -r requirements.txt
+
+
 ***********about project***********
 -todo list app with python
 -store data at mysql

@@ -1,3 +1,8 @@
 .form-class {
-   display: flex;
+  display: flex;
+}
+
+.homepage-content {
+  display: flex;
+  justify-content: center;
 }
