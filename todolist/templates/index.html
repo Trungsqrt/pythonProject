@@ -14,21 +14,39 @@ content %}
             {% for note in user.notes%}
             <div class="list-group-item-wrap">
                 <li class="list-group-item">{{note.data}}</li>
-                <button onclick="" class="edit-note-btn">Edit</button>
-                <button onclick="" class="delete-note-btn">Delete</button>
+
+                <button onclick="editNote(`{{note.id}}`)" class="edit-note-btn">Edit</button>
+
+                <button onclick="deleteNote(`{{note.id}}`)" class="delete-note-btn">Delete</button>
             </div>
             {% endfor %}
         </ul>
 
         </br>
 
-        <form method="POST">
+        <form method="POST" action="/">
             <textarea name="note" id="note" class="form-control"></textarea>
             </br>
             <button type="submit" class="btn btn-primary">Add Note</button>
         </form>
     </div>
 </div>
+
+<script type="text/javascript">
+    const editNote = (note_id) => {
+        console.log(`Edit note ${note_id}...`);
+    }
+
+    const deleteNote = (note_id) => {
+        fetch("/delete-note", {
+            method: "POST",
+            body: JSON.stringify({ note_id: note_id })
+        })
+            .then((response) => {
+                window.location.href = "/";
+            });
+    }
+</script>
 
 <style>
     .homepage-content {
