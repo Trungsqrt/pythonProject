@@ -1,3 +1,7 @@
+# RUN
+-run **app.py** with **terminal** to run website application
+
+
 file view: Homepage
 file user: Authentication
 File model: Database handle
@@ -24,3 +28,5 @@ pip install -r requirements.txt
 -todo list app with python
 -store data at mysql
 -data follow user (login)
+
+
