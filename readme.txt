@@ -24,4 +24,3 @@ pip install -r requirements.txt
 -todo list app with python
 -store data at mysql
 -data follow user (login)
--docker deploy application
