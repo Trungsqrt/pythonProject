@@ -1,5 +1,7 @@
 flask
 flask-login
-flask_sqlalchemy
+flask-sqlalchemy
 python-dotenv
 Werkzeug
+SQLAlchemy
+sqlalchemy
